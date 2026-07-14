@@ -59,9 +59,11 @@ so link previews (OG/Twitter cards) and the canonical tag resolve correctly.
 A few links intentionally point at files that weren't part of the source content handed off, and so aren't in this
 repo yet. They use their correct final relative path, so dropping the real file in place is all that's needed:
 
-- `videos/*.mp4` (6 files, referenced from the Video section of `index.html`) — the actual short-form video files.
 - `articles/corteiz-source.pdf`, `articles/modeshows-source.pdf`, `articles/luxury-and-football-source.pdf` — the
   original PDF write-ups linked from the "Download Original PDF" button on 3 of the research pages.
+
+The Video section's "Watch Video" buttons and thumbnails link out to the real TikTok posts (opening in a new tab),
+so that section has no outstanding gaps.
 
 ## Notes on this pass
 
