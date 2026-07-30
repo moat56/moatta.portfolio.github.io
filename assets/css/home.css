@@ -106,7 +106,7 @@
 /* ============================================================
    PHOTOGRAPHY living gallery
 ============================================================ */
-.photo-section{ padding-bottom: 120px; }
+.photo-section{ padding-bottom: 80px; }
 .marquee-wrap{
   position: relative;
   display:flex;
@@ -389,7 +389,7 @@
   display:grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 80px;
-  margin-bottom: 120px;
+  margin-bottom: 84px;
   align-items: start;
 }
 .research-intro-title{
@@ -417,7 +417,7 @@
   grid-template-columns: 1.3fr 0.7fr;
   gap: 48px;
   align-items:center;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 .research-context-image{
   border-radius: var(--radius-xl);
@@ -440,7 +440,7 @@
   border-radius: var(--radius-xl);
   background: var(--bg-card);
   border: 1px solid var(--line);
-  margin-bottom: 110px;
+  margin-bottom: 80px;
 }
 .featured-pub-image{
   border-radius: var(--radius-lg);
@@ -495,7 +495,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 90px;
   align-items:center;
-  margin-bottom: 140px;
+  margin-bottom: 96px;
 }
 .about-row:last-child{ margin-bottom: 0; }
 .about-row.reverse .about-image{ order:2; }
@@ -534,8 +534,8 @@
 }
 .hobby-grid{
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 26px;
+  grid-template-columns: repeat(4, minmax(0, 240px));
+  gap: 22px;
 }
 .hobby-card{
   position: relative;
@@ -565,10 +565,10 @@
 /* ============================================================
    CONTACT
 ============================================================ */
-.contact-section{ padding-bottom: 140px; }
+.contact-section{ padding-bottom: 100px; }
 .contact-center{
   max-width: 640px;
-  margin: 0 auto;
+  margin: 0 auto 72px;
   text-align: center;
   display: flex;
   flex-direction: column;
