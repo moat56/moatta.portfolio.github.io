@@ -5,7 +5,7 @@
 ============================================================ */
 body{ line-height: 1.7; }
 
-.wrap{ max-width:760px; margin:0 auto; padding: 170px 32px 120px; }
+.wrap{ max-width:760px; margin:0 auto; padding: 130px 32px 90px; }
 
 .back-link{
   display:inline-flex; align-items:center; gap:8px;
@@ -73,7 +73,7 @@ h1.title{
 .read-also-title{ font-size:14.5px; font-weight:600; line-height:1.35; }
 
 @media (max-width:640px){
-  .wrap{ padding:140px 24px 90px; }
+  .wrap{ padding:110px 24px 70px; }
   .abstract{ padding:24px; }
   .read-also-grid{ grid-template-columns:1fr; }
 }
