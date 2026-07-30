@@ -65,11 +65,11 @@ repo yet. They use their correct final relative path, so dropping the real file 
 The Video section's "Watch Video" buttons and thumbnails link out to the real TikTok posts (opening in a new tab),
 so that section has no outstanding gaps.
 
-The new **Social** section's 6 cards link to their real Instagram posts, but the images shown inside each card
-(`assets/images/social/social-ph-*.webp`) are placeholder gradient tiles, not the real post photos — this sandbox
-can't fetch images from instagram.com. Swap the `<img class="social-slide">` sources in `index.html` for the real
-post images (matching the number of slides to how many images that post actually has), and consider updating the
-"Mo Atta" account label if these posts belong to a different handle.
+The new **Social** section's 7 cards link to their real Instagram posts (account: AndAgencyAmsterdam) and carry
+real captions, but the images shown inside each card (`assets/images/social/social-ph-*.webp`) are placeholder
+gradient tiles, not the real post photos — this sandbox can't fetch images from instagram.com. Swap the
+`<img class="social-slide">` sources in `index.html` for the real post images whenever you have them (matching the
+number of slides to how many images that post actually has).
 
 ## Notes on this pass
 
