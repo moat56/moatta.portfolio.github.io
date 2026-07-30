@@ -65,11 +65,15 @@ repo yet. They use their correct final relative path, so dropping the real file 
 The Video section's "Watch Video" buttons and thumbnails link out to the real TikTok posts (opening in a new tab),
 so that section has no outstanding gaps.
 
-The new **Social** section's 7 cards link to their real Instagram posts (account: AndAgencyAmsterdam) and carry
-real captions, but the images shown inside each card (`assets/images/social/social-ph-*.webp`) are placeholder
-gradient tiles, not the real post photos — this sandbox can't fetch images from instagram.com. Swap the
-`<img class="social-slide">` sources in `index.html` for the real post images whenever you have them (matching the
-number of slides to how many images that post actually has).
+The **Social** section's 7 cards are custom Instagram-inspired cards (cover image, like count, caption, "View on
+Instagram" button) — real captions and "View on Instagram" links throughout (account: AndAgencyAmsterdam), but two
+gaps remain until you supply the real assets:
+
+- Cover images (`assets/images/social/social-ph-*.webp`) are placeholder gradient tiles. Swap the `<img>` inside
+  each card's `.social-cover` in `index.html` for the real cover photo — one image per card, no other markup
+  changes needed.
+- Two cards (the ones linking to `C2xbdQsIU-m` and `C40hU5gNl6X`) show "— likes" because their like counts weren't
+  available; replace that text in the matching `.social-likes` element once you have the real numbers.
 
 ## Notes on this pass
 

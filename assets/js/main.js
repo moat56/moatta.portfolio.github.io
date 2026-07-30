@@ -108,34 +108,6 @@
   initHorizontalCarousel('videoTrack', 'arrowLeft', 'arrowRight', '.video-card');
   initHorizontalCarousel('socialTrack', 'arrowLeftSocial', 'arrowRightSocial', '.social-card');
 
-  /* ---------- Instagram-style multi-image cards ---------- */
-  document.querySelectorAll('.social-card').forEach(function (card) {
-    var slidesWrap = card.querySelector('.social-slides');
-    var slides = card.querySelectorAll('.social-slide');
-    var dots = card.querySelectorAll('.social-dot');
-    var prevBtn = card.querySelector('.social-media-nav.prev');
-    var nextBtn = card.querySelector('.social-media-nav.next');
-    if (!slidesWrap || slides.length <= 1) {
-      if (prevBtn) prevBtn.style.display = 'none';
-      if (nextBtn) nextBtn.style.display = 'none';
-      return;
-    }
-    var index = 0;
-    function render() {
-      slidesWrap.style.transform = 'translateX(-' + (index * 100) + '%)';
-      dots.forEach(function (d, i) { d.classList.toggle('active', i === index); });
-    }
-    function go(delta) {
-      index = (index + delta + slides.length) % slides.length;
-      render();
-    }
-    if (prevBtn) prevBtn.addEventListener('click', function () { go(-1); });
-    if (nextBtn) nextBtn.addEventListener('click', function () { go(1); });
-    dots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () { index = i; render(); });
-    });
-  });
-
   /* ---------- Hero portrait scroll parallax ---------- */
   var heroImg = document.querySelector('.hero-portrait img');
   var heroSection = document.getElementById('home');
