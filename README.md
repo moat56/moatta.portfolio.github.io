@@ -66,14 +66,9 @@ The Video section's "Watch Video" buttons and thumbnails link out to the real Ti
 so that section has no outstanding gaps.
 
 The **Social** section's 7 cards are custom Instagram-inspired cards (cover image, like count, caption, "View on
-Instagram" button) — real captions and "View on Instagram" links throughout (account: AndAgencyAmsterdam), but two
-gaps remain until you supply the real assets:
-
-- Cover images (`assets/images/social/social-ph-*.webp`) are placeholder gradient tiles. Swap the `<img>` inside
-  each card's `.social-cover` in `index.html` for the real cover photo — one image per card, no other markup
-  changes needed.
-- Two cards (the ones linking to `C2xbdQsIU-m` and `C40hU5gNl6X`) show "— likes" because their like counts weren't
-  available; replace that text in the matching `.social-likes` element once you have the real numbers.
+Instagram" button) with real cover photos, captions, and "View on Instagram" links (account: AndAgencyAmsterdam).
+One gap remains: 2 cards (linking to `C2xbdQsIU-m` and `C40hU5gNl6X`) show "— likes" because their like counts
+weren't available; replace that text in the matching `.social-likes` element once you have the real numbers.
 
 ## Notes on this pass
 
