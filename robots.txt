@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://moat56.github.io/moatta.portfolio.github.io/sitemap.xml
+Sitemap: https://moattaportfolio.com/sitemap.xml
