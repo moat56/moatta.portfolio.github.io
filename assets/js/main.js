@@ -108,6 +108,33 @@
   initHorizontalCarousel('videoTrack', 'arrowLeft', 'arrowRight', '.video-card');
   initHorizontalCarousel('socialTrack', 'arrowLeftSocial', 'arrowRightSocial', '.social-card');
 
+  /* ---------- Outbound link click tracking (GA4) ---------- */
+  function outboundPlatform(href) {
+    if (!href) return null;
+    if (href.indexOf('mailto:') === 0) return { platform: 'Email', domain: 'mailto' };
+    var host;
+    try { host = new URL(href, window.location.href).hostname.replace(/^www\./, ''); }
+    catch (e) { return null; }
+    if (host === 'linkedin.com') return { platform: 'LinkedIn', domain: host };
+    if (host === 'github.com') return { platform: 'GitHub', domain: host };
+    if (host === 'instagram.com') return { platform: 'Instagram', domain: host };
+    if (host === 'tiktok.com') return { platform: 'TikTok', domain: host };
+    return null;
+  }
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href]');
+    if (!link) return;
+    var info = outboundPlatform(link.getAttribute('href'));
+    if (!info || typeof window.gtag !== 'function') return;
+    window.gtag('event', 'click', {
+      link_url: link.href,
+      link_domain: info.domain,
+      link_text: (link.textContent || '').trim().slice(0, 100),
+      outbound: true,
+      outbound_platform: info.platform
+    });
+  });
+
   /* ---------- Hero portrait scroll parallax ---------- */
   var heroImg = document.querySelector('.hero-portrait img');
   var heroSection = document.getElementById('home');
