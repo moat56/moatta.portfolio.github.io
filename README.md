@@ -47,12 +47,12 @@ The site is a pure static bundle, so all three targets work with zero build conf
 - **Netlify**: point it at this repo; `netlify.toml` already sets the publish directory to `.` and adds sane cache headers.
 - **Vercel**: import the repo as-is; `vercel.json` sets the same cache headers. No framework preset needed ("Other").
 
-### One thing to update before/after deploying
+### Canonical domain
 
-`index.html` and the 4 research pages hardcode canonical/Open Graph URLs pointing at
-`https://moat56.github.io/moatta.portfolio.github.io/` (the default GitHub Pages project URL). If you deploy on
-Netlify/Vercel with a custom domain instead, find-and-replace that base URL in the 5 HTML files with your real domain
-so link previews (OG/Twitter cards) and the canonical tag resolve correctly.
+`index.html`, the 4 research pages, `sitemap.xml` and `robots.txt` all point at the live custom domain,
+`https://moattaportfolio.com/` (see `CNAME`). If you ever move the site to a different domain, find-and-replace that
+base URL across those files so link previews (OG/Twitter cards), the canonical tags and the sitemap resolve
+correctly.
 
 ## Known content gaps
 
